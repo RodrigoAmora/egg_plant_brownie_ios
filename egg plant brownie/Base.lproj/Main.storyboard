@@ -55,6 +55,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="felicidadeTextField" destination="26M-qb-Fa9" id="IsS-xp-e4R"/>
+                        <outlet property="nomeTextField" destination="Sd3-Li-4nZ" id="6R1-Fx-71D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
