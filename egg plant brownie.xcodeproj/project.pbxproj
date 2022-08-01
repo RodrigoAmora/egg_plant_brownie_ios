@@ -16,6 +16,8 @@
 		D23CDAD9288F3C41006C5811 /* egg_plant_brownieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAD8288F3C41006C5811 /* egg_plant_brownieTests.swift */; };
 		D23CDAE3288F3C41006C5811 /* egg_plant_brownieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAE2288F3C41006C5811 /* egg_plant_brownieUITests.swift */; };
 		D23CDAE5288F3C41006C5811 /* egg_plant_brownieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAE4288F3C41006C5811 /* egg_plant_brownieUITestsLaunchTests.swift */; };
+		D29FD77F289794F900624ABE /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29FD77E289794F900624ABE /* Refeicao.swift */; };
+		D29FD7822897960400624ABE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29FD7812897960400624ABE /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D23CDADE288F3C41006C5811 /* egg plant brownieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "egg plant brownieUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23CDAE2288F3C41006C5811 /* egg_plant_brownieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = egg_plant_brownieUITests.swift; sourceTree = "<group>"; };
 		D23CDAE4288F3C41006C5811 /* egg_plant_brownieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = egg_plant_brownieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D29FD77E289794F900624ABE /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
+		D29FD7812897960400624ABE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,11 @@
 		D23CDAC0288F3C41006C5811 /* egg plant brownie */ = {
 			isa = PBXGroup;
 			children = (
+				D29FD783289796A500624ABE /* controllers */,
+				D29FD780289795EE00624ABE /* model */,
+				D29FD7842897971700624ABE /* views */,
 				D23CDAC1288F3C41006C5811 /* AppDelegate.swift */,
 				D23CDAC3288F3C41006C5811 /* SceneDelegate.swift */,
-				D23CDAC5288F3C41006C5811 /* ViewController.swift */,
-				D23CDAC7288F3C41006C5811 /* Main.storyboard */,
 				D23CDACA288F3C41006C5811 /* Assets.xcassets */,
 				D23CDACC288F3C41006C5811 /* LaunchScreen.storyboard */,
 				D23CDACF288F3C41006C5811 /* Info.plist */,
@@ -125,6 +130,31 @@
 				D23CDAE4288F3C41006C5811 /* egg_plant_brownieUITestsLaunchTests.swift */,
 			);
 			path = "egg plant brownieUITests";
+			sourceTree = "<group>";
+		};
+		D29FD780289795EE00624ABE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D29FD77E289794F900624ABE /* Refeicao.swift */,
+				D29FD7812897960400624ABE /* Item.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D29FD783289796A500624ABE /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D23CDAC5288F3C41006C5811 /* ViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		D29FD7842897971700624ABE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D23CDAC7288F3C41006C5811 /* Main.storyboard */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29FD7822897960400624ABE /* Item.swift in Sources */,
 				D23CDAC6288F3C41006C5811 /* ViewController.swift in Sources */,
 				D23CDAC2288F3C41006C5811 /* AppDelegate.swift in Sources */,
 				D23CDAC4288F3C41006C5811 /* SceneDelegate.swift in Sources */,
+				D29FD77F289794F900624ABE /* Refeicao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
