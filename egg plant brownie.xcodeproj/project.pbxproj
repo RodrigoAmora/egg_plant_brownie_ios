@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20B49C7289B7B450024045A /* RefeicaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B49C6289B7B450024045A /* RefeicaoTableViewController.swift */; };
 		D23CDAC2288F3C41006C5811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAC1288F3C41006C5811 /* AppDelegate.swift */; };
 		D23CDAC4288F3C41006C5811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAC3288F3C41006C5811 /* SceneDelegate.swift */; };
 		D23CDAC6288F3C41006C5811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAC5288F3C41006C5811 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20B49C6289B7B450024045A /* RefeicaoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoTableViewController.swift; sourceTree = "<group>"; };
 		D23CDABE288F3C41006C5811 /* egg plant brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "egg plant brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23CDAC1288F3C41006C5811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23CDAC3288F3C41006C5811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				D23CDAC5288F3C41006C5811 /* ViewController.swift */,
+				D20B49C6289B7B450024045A /* RefeicaoTableViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				D23CDAC2288F3C41006C5811 /* AppDelegate.swift in Sources */,
 				D23CDAC4288F3C41006C5811 /* SceneDelegate.swift in Sources */,
 				D29FD77F289794F900624ABE /* Refeicao.swift in Sources */,
+				D20B49C7289B7B450024045A /* RefeicaoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
