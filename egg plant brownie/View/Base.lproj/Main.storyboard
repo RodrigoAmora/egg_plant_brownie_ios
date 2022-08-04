@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="f9i-Wa-gQN" kind="relationship" relationship="rootViewController" id="37W-Wh-0dR"/>
+                        <segue destination="f9i-Wa-gQN" kind="relationship" relationship="rootViewController" destinationCreationSelector="adicionar" id="37W-Wh-0dR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKt-Sh-Mbu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" id="Ntl-Gd-ELa">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="hqY-Rl-lqw">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Tqb-8R-uac"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="adicionar" id="Tqb-8R-uac"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
