@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D20B49C7289B7B450024045A /* RefeicaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B49C6289B7B450024045A /* RefeicaoTableViewController.swift */; };
+		D20B49C7289B7B450024045A /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B49C6289B7B450024045A /* RefeicoesTableViewController.swift */; };
 		D23CDAC2288F3C41006C5811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAC1288F3C41006C5811 /* AppDelegate.swift */; };
 		D23CDAC4288F3C41006C5811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAC3288F3C41006C5811 /* SceneDelegate.swift */; };
 		D23CDAC6288F3C41006C5811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23CDAC5288F3C41006C5811 /* ViewController.swift */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D20B49C6289B7B450024045A /* RefeicaoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoTableViewController.swift; sourceTree = "<group>"; };
+		D20B49C6289B7B450024045A /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 		D23CDABE288F3C41006C5811 /* egg plant brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "egg plant brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23CDAC1288F3C41006C5811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23CDAC3288F3C41006C5811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,9 +105,9 @@
 		D23CDAC0288F3C41006C5811 /* egg plant brownie */ = {
 			isa = PBXGroup;
 			children = (
-				D29FD783289796A500624ABE /* controllers */,
-				D29FD780289795EE00624ABE /* model */,
-				D29FD7842897971700624ABE /* views */,
+				D29FD783289796A500624ABE /* Controllers */,
+				D29FD780289795EE00624ABE /* Models */,
+				D29FD7842897971700624ABE /* View */,
 				D23CDAC1288F3C41006C5811 /* AppDelegate.swift */,
 				D23CDAC3288F3C41006C5811 /* SceneDelegate.swift */,
 				D23CDACA288F3C41006C5811 /* Assets.xcassets */,
@@ -134,30 +134,30 @@
 			path = "egg plant brownieUITests";
 			sourceTree = "<group>";
 		};
-		D29FD780289795EE00624ABE /* model */ = {
+		D29FD780289795EE00624ABE /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D29FD77E289794F900624ABE /* Refeicao.swift */,
 				D29FD7812897960400624ABE /* Item.swift */,
 			);
-			path = model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		D29FD783289796A500624ABE /* controllers */ = {
+		D29FD783289796A500624ABE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D23CDAC5288F3C41006C5811 /* ViewController.swift */,
-				D20B49C6289B7B450024045A /* RefeicaoTableViewController.swift */,
+				D20B49C6289B7B450024045A /* RefeicoesTableViewController.swift */,
 			);
-			path = controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		D29FD7842897971700624ABE /* views */ = {
+		D29FD7842897971700624ABE /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D23CDAC7288F3C41006C5811 /* Main.storyboard */,
 			);
-			path = views;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +296,7 @@
 				D23CDAC2288F3C41006C5811 /* AppDelegate.swift in Sources */,
 				D23CDAC4288F3C41006C5811 /* SceneDelegate.swift in Sources */,
 				D29FD77F289794F900624ABE /* Refeicao.swift in Sources */,
-				D20B49C7289B7B450024045A /* RefeicaoTableViewController.swift in Sources */,
+				D20B49C7289B7B450024045A /* RefeicoesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,10 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UIViewController {
 
-    @IBOutlet var nomeTextField: UITextField?
-    @IBOutlet var felicidadeTextField: UITextField?
-    
-    let refeicoes = ["Churros", "Macarrão", "Pizza"]
+    @IBOutlet weak var nomeTextField: UITextField?
+    @IBOutlet weak var feilicidadeTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +35,7 @@ class ViewController: UITableViewController {
             return
         }
         
-        guard let felicidadeDaRefeicao = felicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else {
+        guard let felicidadeDaRefeicao = feilicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else {
             return
         }
         
