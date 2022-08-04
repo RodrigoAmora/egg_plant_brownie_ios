@@ -8,7 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var refeicaoTableViewController: RefeicoesTableViewController?
+    
     @IBOutlet weak var nomeTextField: UITextField?
     @IBOutlet weak var feilicidadeTextField: UITextField?
     
@@ -42,6 +44,9 @@ class ViewController: UIViewController {
         let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
         
         print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+        
+        refeicaoTableViewController?.add(refeicao)
+        navigationController?.popViewController(animated: true)
     }
 
 }
