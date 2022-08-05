@@ -12,10 +12,16 @@ protocol AdicionaRefeicaoDelegate {
 }
 
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, UITableViewDataSource {
+
+    // MARK: - Artibutos
     var delegate: AdicionaRefeicaoDelegate?
+    var itens: [Refeicao] = [Refeicao(nome: "Arroz", felicidade: 5),
+                             Refeicao(nome: "Feijão", felicidade: 5),
+                             Refeicao(nome: "Bife", felicidade: 5),
+                             Refeicao(nome: "Batata Frita", felicidade: 5),]
     
+    // MARK: - IBOutlets
     @IBOutlet weak var nomeTextField: UITextField?
     @IBOutlet weak var feilicidadeTextField: UITextField?
     
@@ -24,6 +30,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - IBActions
     @IBAction func adicionar(_ sender: Any) {
         /*
         if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text {
@@ -37,7 +44,6 @@ class ViewController: UIViewController {
             print("erro ao tentar criar refeicao")
         }
         */
-        
         guard let nomeDaRefeicao = nomeTextField?.text else {
             return
         }
@@ -54,5 +60,19 @@ class ViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itens.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item: Refeicao = itens[indexPath.row]
+        
+        let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
+        celula.textLabel?.text = item.nome
+        
+        return celula
+    }
+    
 }
 
