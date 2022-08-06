@@ -12,14 +12,16 @@ protocol AdicionaRefeicaoDelegate {
 }
 
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Artibutos
     var delegate: AdicionaRefeicaoDelegate?
-    var itens: [Refeicao] = [Refeicao(nome: "Arroz", felicidade: 5),
-                             Refeicao(nome: "Feijão", felicidade: 5),
-                             Refeicao(nome: "Bife", felicidade: 5),
-                             Refeicao(nome: "Batata Frita", felicidade: 5),]
+    var itens: [Item] = [Item(nome: "Arroz", calorias: 50.6),
+                         Item(nome: "Feijão", calorias: 50.6),
+                         Item(nome: "Bife", calorias: 50.6),
+                         Item(nome: "Batata Frita", calorias: 50.6)]
+    
+    var itensSelecionados: Array<Item> = []
     
     // MARK: - IBOutlets
     @IBOutlet weak var nomeTextField: UITextField?
@@ -52,7 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             return
         }
         
-        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade)
+        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
         
         print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
         
@@ -66,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item: Refeicao = itens[indexPath.row]
+        let item: Item = itens[indexPath.row]
         
         let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
         celula.textLabel?.text = item.nome
@@ -74,5 +76,23 @@ class ViewController: UIViewController, UITableViewDataSource {
         return celula
     }
     
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let celula = tableView.cellForRow(at: indexPath) else {
+            return
+        }
+        
+        if celula.accessoryType == .none {
+            celula.accessoryType = .checkmark
+            itensSelecionados.append(itens[indexPath.row])
+        } else {
+            celula.accessoryType = .none
+            
+            let item = itens[indexPath.row]
+            if let position = itensSelecionados.index(of: item) {
+                itensSelecionados.remove(at: position)
+            }
+        }
+    }
 }
 
