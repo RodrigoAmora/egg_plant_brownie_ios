@@ -44,18 +44,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - IBActions
     @IBAction func adicionar(_ sender: Any) {
-        /*
-        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text {
-            let nome = nomeDaRefeicao
-            let felicidade = felicidadeDaRefeicao
-            
-            let refeicao = Refeicao(nome: nome, felicidade: felicidade)
-            
-            print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-        } else {
-            print("erro ao tentar criar refeicao")
-        }
-        */
         guard let nomeDaRefeicao = nomeTextField?.text else {
             return
         }
