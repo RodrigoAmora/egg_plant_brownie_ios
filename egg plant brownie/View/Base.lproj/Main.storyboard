@@ -121,6 +121,7 @@
                     <navigationItem key="navigationItem" id="UQw-HK-Qyf"/>
                     <connections>
                         <outlet property="feilicidadeTextField" destination="26M-qb-Fa9" id="rJP-av-K35"/>
+                        <outlet property="itnsTableView" destination="Xr9-Yh-FE8" id="S42-qU-7gC"/>
                         <outlet property="nomeTextField" destination="Sd3-Li-4nZ" id="wLS-DG-Hrl"/>
                     </connections>
                 </viewController>

@@ -12,8 +12,8 @@ protocol AdicionaRefeicaoDelegate {
 }
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdicionarItemDelegate {
+    
     // MARK: - Artibutos
     var delegate: AdicionaRefeicaoDelegate?
     var itens: [Item] = [Item(nome: "Arroz", calorias: 50.6),
@@ -26,10 +26,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - IBOutlets
     @IBOutlet weak var nomeTextField: UITextField?
     @IBOutlet weak var feilicidadeTextField: UITextField?
+    @IBOutlet weak var itnsTableView: UITableView?
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let botaoAdicionarItem = UIBarButtonItem(title: "adicionar", style: .plain, target: self, action: #selector(self.adicionarItem))
+        
+        self.navigationItem.rightBarButtonItem = botaoAdicionarItem
+    }
+    
+    @objc func adicionarItem() {
+        print("adicionar novo item")
+        let adicionarItensViewController = AdicionarItensViewController(adicionarItemDelegate: self)
+        self.navigationController?.pushViewController(adicionarItensViewController, animated: true)
     }
     
     // MARK: - IBActions
@@ -93,6 +103,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 itensSelecionados.remove(at: position)
             }
         }
+    }
+    
+    // MARK: - AdicionarItemDelegate
+    func add(_ item: Item) {
+        itens.append(item)
+        itnsTableView?.reloadData()
     }
 }
 
