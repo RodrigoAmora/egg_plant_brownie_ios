@@ -45,10 +45,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - IBActions
     @IBAction func adicionar(_ sender: Any) {
         guard let nomeDaRefeicao = nomeTextField?.text else {
+            Alerta(controller: self).exibe(message: "Erro ao ler o campo nome")
             return
         }
         
         guard let felicidadeDaRefeicao = feilicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else {
+            Alerta(controller: self).exibe(message: "Erro ao ler o campo felicidade")
             return
         }
         
