@@ -41,15 +41,18 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             let refeicao = refeicoes[indexPath.row]
             
             
-            
-            
             let alert = UIAlertController(title: refeicao.nome,
                                           message: refeicao.detalhes(),
                                           preferredStyle: .alert)
             
-            let botaoCancelar = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let botaoCancelar = UIAlertAction(title: "OK", style: .cancel)
+            let botaoRemover = UIAlertAction(title: "Remover", style: .destructive, handler: { alerta in
+                self.refeicoes.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            })
             
             alert.addAction(botaoCancelar)
+            alert.addAction(botaoRemover)
             
             present(alert, animated: true, completion: nil)
         }
