@@ -21,6 +21,7 @@
 		D29FD7822897960400624ABE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29FD7812897960400624ABE /* Item.swift */; };
 		D2BD86D828A0A52900DD9D45 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD86D628A0A52900DD9D45 /* AdicionarItensViewController.swift */; };
 		D2BD86D928A0A52900DD9D45 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2BD86D728A0A52900DD9D45 /* AdicionarItensViewController.xib */; };
+		D2D209F928BE8B2400ED4ABF /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D209F828BE8B2400ED4ABF /* Alerta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D29FD7812897960400624ABE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D2BD86D628A0A52900DD9D45 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
 		D2BD86D728A0A52900DD9D45 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
+		D2D209F828BE8B2400ED4ABF /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				D29FD77E289794F900624ABE /* Refeicao.swift */,
 				D29FD7812897960400624ABE /* Item.swift */,
+				D2D209F828BE8B2400ED4ABF /* Alerta.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D209F928BE8B2400ED4ABF /* Alerta.swift in Sources */,
 				D29FD7822897960400624ABE /* Item.swift in Sources */,
 				D23CDAC6288F3C41006C5811 /* ViewController.swift in Sources */,
 				D2BD86D828A0A52900DD9D45 /* AdicionarItensViewController.swift in Sources */,
