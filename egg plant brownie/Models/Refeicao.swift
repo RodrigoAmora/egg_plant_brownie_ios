@@ -7,10 +7,10 @@
 
 import UIKit
 
-class Refeicao: NSObject {
+class Refeicao: NSObject, NSCoding {
     
-    let nome: String
-    let felicidade: Int
+    var nome: String = ""
+    var felicidade: Int = 0
     var itens: Array<Item> = []
     
     init(nome: String, felicidade: Int, itens: [Item] = []) {
@@ -19,6 +19,20 @@ class Refeicao: NSObject {
         self.itens = itens
     }
     
+    // MARK: - NSCondimg
+    func encode(with coder: NSCoder) {
+        coder.encode(nome, forKey: "nome")
+        coder.encode(felicidade, forKey: "felicidade")
+        coder.encode(itens, forKey: "itens")
+    }
+    
+    required init?(coder: NSCoder) {
+        coder.decodeObject(forKey: "nome")
+        coder.decodeObject(forKey: "felicidade")
+        coder.decodeObject(forKey: "itens")
+    }
+    
+    // MARK: - Methods
     func totalDeCalorias() -> Double {
         var total = 0.0
         
