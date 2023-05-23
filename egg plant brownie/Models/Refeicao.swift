@@ -9,11 +9,12 @@ import UIKit
 
 class Refeicao: NSObject, NSCoding {
     
+    // MARK: - Atributos
     var nome: String = ""
     var felicidade: Int = 0
     var itens: Array<Item> = []
     
-    // MARK: - init
+    // MARK: - Init
     init(nome: String, felicidade: Int, itens: [Item] = []) {
         self.nome = nome
         self.felicidade = felicidade

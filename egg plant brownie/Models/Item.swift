@@ -9,10 +9,11 @@ import UIKit
 
 class Item: NSObject, NSCoding {
     
+    // MARK: - Atributos
     let nome: String
     let calorias: Double
     
-    // MARK: - init
+    // MARK: - Init
     init(nome: String, calorias: Double) {
         self.nome = nome
         self.calorias = calorias
