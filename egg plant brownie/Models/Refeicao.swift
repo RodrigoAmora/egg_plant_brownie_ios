@@ -13,6 +13,7 @@ class Refeicao: NSObject, NSCoding {
     var felicidade: Int = 0
     var itens: Array<Item> = []
     
+    // MARK: - init
     init(nome: String, felicidade: Int, itens: [Item] = []) {
         self.nome = nome
         self.felicidade = felicidade
@@ -27,9 +28,9 @@ class Refeicao: NSObject, NSCoding {
     }
     
     required init?(coder: NSCoder) {
-        coder.decodeObject(forKey: "nome")
-        coder.decodeObject(forKey: "felicidade")
-        coder.decodeObject(forKey: "itens")
+        nome = coder.decodeObject(forKey: "nome") as! String
+        felicidade = coder.decodeInteger(forKey: "felicidade")
+        itens = coder.decodeObject(forKey: "itens") as! Array<Item>
     }
     
     // MARK: - Methods
@@ -45,9 +46,12 @@ class Refeicao: NSObject, NSCoding {
     
     func detalhes() -> String {
         var mensagem = "Felicidade: \(felicidade) \n"
+        
         for item in itens {
             mensagem += ", \(item.nome) - calorias: \(item.calorias)"
         }
+        
         return mensagem
     }
+    
 }
