@@ -16,12 +16,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Artibutos
     var delegate: AdicionaRefeicaoDelegate?
-    var itens: [Item] = [Item(nome: "Arroz", calorias: 50.6),
-                         Item(nome: "Feijão", calorias: 50.6),
-                         Item(nome: "Bife", calorias: 50.6),
-                         Item(nome: "Batata Frita", calorias: 50.6)]
     
-    var itensSelecionados: Array<Item> = []
+    var itens: [Item] = []
+    var itensSelecionados: [Item] = []
+    
+    //var itensSelecionados: Array<Item> = []
     
     // MARK: - IBOutlets
     @IBOutlet weak var nomeTextField: UITextField?
@@ -36,11 +35,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.navigationItem.rightBarButtonItem = botaoAdicionarItem
     }
     
+    func recuperaItens() {
+        itens = ItemDao().recupera()
+    }
+    
     @objc func adicionarItem() {
         print("adicionar novo item")
         let adicionarItensViewController = AdicionarItensViewController(adicionarItemDelegate: self)
         self.navigationController?.pushViewController(adicionarItensViewController, animated: true)
     }
+    
+    
     
     // MARK: - IBActions
     @IBAction func adicionar(_ sender: Any) {
@@ -98,7 +103,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - AdicionarItemDelegate
     func add(_ item: Item) {
         itens.append(item)
-        
+        ItemDao().save(itens)
         if let tableView = itensTableView {
             tableView.reloadData()
         } else {
